@@ -1,0 +1,69 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed from space-between */
+  background: #c70000;
+  color: #fff;
+  padding: 22px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  position: relative; /* Added for absolute positioning of logo */
+}
+
+.navbar .logo {
+  position: absolute; /* Position logo absolutely */
+  left: 20px; /* Place it on the left */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-left: 90px; /* Account for hamburger button space */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center; /* Center the links */
+}
+
+.nav-links li {
+  cursor: pointer;
+  padding: 6px 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-links li.active {
+  background: white;
+  color: #c70000;
+  border-radius: 4px; /* Square shape */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar .logo {
+    margin-left: 60px;
+    font-size: 1rem;
+  }
+  
+  .nav-links {
+    gap: 12px;
+  }
+  
+  .nav-links li {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+}

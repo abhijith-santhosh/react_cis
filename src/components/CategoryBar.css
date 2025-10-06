@@ -1,0 +1,73 @@
+/* CategoryBar.css */
+.category-bar {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* each category button */
+.category-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ececec;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 110px; /* ensures consistent size */
+  transition: transform 0.12s ease, box-shadow 0.12s;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+/* icon inside the button (circular) */
+.category-bar button .category-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  background: #fbfbfb;
+  font-size: 1.1rem;
+}
+
+/* name / label */
+.category-bar button .category-name {
+  display: block;
+  text-align: left;
+  font-size: 0.92rem;
+  color: #333;
+}
+
+/* active state */
+.category-bar button.active {
+  border-color: #c70000;
+  color: #c70000;
+  box-shadow: 0 4px 12px rgba(199,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* hover state */
+.category-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* small screens: reduce spacing */
+@media (max-width: 520px) {
+  .category-bar button {
+    min-width: 94px;
+    padding: 6px 8px;
+  }
+  .category-bar button .category-name {
+    font-size: 0.82rem;
+  }
+}
