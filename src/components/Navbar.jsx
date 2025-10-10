@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+import "../css/Navbar.css";
 
 export default function Navbar({ onProductsClick }) {
   const [activeTab, setActiveTab] = useState("");

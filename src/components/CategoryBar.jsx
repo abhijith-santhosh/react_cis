@@ -1,5 +1,5 @@
 import React from "react";
-import "./CategoryBar.css";
+import "../css/CategoryBar.css";
 
 export default function CategoryBar({ categories, selected, onSelect }) {
   return (
